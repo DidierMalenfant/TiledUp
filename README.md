@@ -1,8 +1,8 @@
-# TiledUp for Playdate
+# Tiled Up for Playdate
 
 ![](https://img.shields.io/github/license/DidierMalenfant/tiled-up) ![](https://img.shields.io/badge/Lua-5.4-yellowgreen) ![](https://img.shields.io/badge/toybox.py-compatible-brightgreen) ![](https://img.shields.io/github/v/tag/DidierMalenfant/tiled-up)
 
-**TiledUp** is a [**Playdate**](https://play.date) **toybox** which lets you import and use [**Tiled**](https://www.mapeditor.org) levels. This is based on code found in the `Level1_1` example in the **Playdate** SDK but it extends it to provide new features and optimised level rendering.
+**Tiled Up** is a [**Playdate**](https://play.date) **toybox** which lets you import and use [**Tiled**](https://www.mapeditor.org) levels. This is based on code found in the `Level1_1` example in the **Playdate** SDK but it extends it to provide new features and optimised level rendering.
 
 You can add it to your **Playdate** project by installing [**toybox.py**](https://toyboxpy.io), going to your project folder in a Terminal window and typing:
 
@@ -54,4 +54,4 @@ Layers are basically a subset of the `layer` objects found in the **Tiled** file
 
 ## License
 
-`TiledUp` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+`Tiled Up` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
