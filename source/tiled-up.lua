@@ -13,9 +13,11 @@ local path <const> = pdbase.filepath
 
 class('Layer', { }, tiledup).extends()
 
-function Layer:init()
-    Layer.super.init(self)
+function tiledup.Layer:init()
+    tiledup.Layer.super.init(self)
     
+    self.name = nil
+    self.layers = {}
 end
 
 -- loads the json file and returns a Lua table containing the data
@@ -118,8 +120,8 @@ end
 
 class('Level', { }, tiledup).extends()
 
-function Level:init(tiled_path)
-    Level.super.init(self)
+function tiledup.Level:init(tiled_path)
+    tiledup.Level.super.init(self)
     
     self.tile_width = 0
     self.tile_height = 0
