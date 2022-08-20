@@ -3,7 +3,7 @@
 -- SPDX-License-Identifier: MIT
  
 -- This is super fragile. Hopefully can be replaced in the future if pdc supports absolute paths from project root.
-import '../../../../toyboxes/toyboxes.lua'
+import '../../pdbase/pdbase.lua'
 
 tiledup {}
 
