@@ -54,4 +54,4 @@ Layers are basically a subset of the `layer` objects found in the **Tiled** file
 
 ## License
 
-`Tiled Up` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+**Tiled Up** is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
