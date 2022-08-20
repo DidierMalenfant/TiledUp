@@ -141,14 +141,14 @@ function tiledup.Level:init(tiled_path)
 
     -- create tile maps from the level data and already-loaded tile sets
     for i = 1, #json_table.layers do
-        local level = {}
+        local layer = tiledup.Layer()
         local json_layer = json_table.layers[i]
 
-        level.name = json_layer.name
-        level.x = json_layer.x
-        level.y = json_layer.y
-        level.tileHeight = json_layer.height
-        level.tileWidth = json_layer.width
+        layer.name = json_layer.name
+        layer.x = json_layer.x
+        layer.y = json_layer.y
+        layer.tileHeight = json_layer.height
+        layer.tileWidth = json_layer.width
 
         local tileset = nil
         local properties = json_layer.properties
@@ -156,14 +156,14 @@ function tiledup.Level:init(tiled_path)
             local tileset_name = tileset_nameForProperies(properties)
             if tileset_name ~= nil then
                 tileset = tilesetWithName(tilesets, tileset_name)
-                level.pixelHeight = level.tileHeight * tileset.tileHeight
-                level.pixelWidth = level.tileWidth * tileset.tileWidth
+                layer.pixelHeight = layer.tileHeight * tileset.tileHeight
+                layer.pixelWidth = layer.tileWidth * tileset.tileWidth
 
                 local tilemap = gfx.tilemap.new()
                 assert(tilemap)
 
                 tilemap:setImageTable(tileset.imageTable)
-                tilemap:setSize(level.tileWidth, level.tileHeight)
+                tilemap:setSize(layer.tileWidth, layer.tileHeight)
 
                 -- we want our indexes for each tile set to be 1-based, so remove the offset that Tiled adds.
                 -- this is only makes sense because because we have exactly one tile map image per layer
@@ -183,18 +183,18 @@ function tiledup.Level:init(tiled_path)
 
                     x = x + 1
 
-                    if x > level.tileWidth - 1 then
+                    if x > layer.tileWidth - 1 then
                         x = 0
                         y = y + 1
                     end
                 end
 
-                level.tilemap = tilemap
+                layer.tilemap = tilemap
                 
-                self.layers[json_layer.name] = level
+                self.layers[json_layer.name] = layer
             end
 
-            level.collisions_on = collisions_onForProperies(properties)
+            layer.collisions_on = collisions_onForProperies(properties)
         end
 
         if tileset == nil then
