@@ -28,7 +28,7 @@ It provides two classes: `Level` and `Layer`.
 
 A `tiledup.Level` object contains the following properties:
 
-* `Level.layers` -  An array of `tiledup.Layers`.
+* `Level.layers` -  A dictionary of `tiledup.Layers`, sorted by layer name.
 * `Level.tile_width`, `Level.tile_height` - Width and height of a single tile in the level.
 
 ##### `tiledup.Level(path)`
