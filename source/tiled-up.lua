@@ -5,7 +5,7 @@
 -- This is super fragile. Hopefully can be replaced in the future if pdc supports absolute paths from project root.
 import '../../pdbase/pdbase.lua'
 
-tiledup {}
+tiledup = {}
 
 local gfx <const> = playdate.graphics
 local file <const> = playdate.file
