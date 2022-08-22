@@ -1,6 +1,6 @@
 # Tiled Up for Playdate
 
-![](https://img.shields.io/github/license/DidierMalenfant/tiled-up) ![](https://img.shields.io/badge/Lua-5.4-yellowgreen) ![](https://img.shields.io/badge/toybox.py-compatible-brightgreen) ![](https://img.shields.io/github/v/tag/DidierMalenfant/tiled-up)
+[![MIT License](https://img.shields.io/github/license/DidierMalenfant/tiled-up)](https://spdx.org/licenses/MIT.html) [![Lua Version](https://img.shields.io/badge/Lua-5.4-yellowgreen)](https://lua.org) [![Toybox Compatible](https://img.shields.io/badge/toybox.py-compatible-brightgreen)](https://toyboxpy.io) [![Latest Version](https://img.shields.io/github/v/tag/DidierMalenfant/tiled-up)](https://github.com/DidierMalenfant/tiled-up/tags)
 
 **Tiled Up** is a [**Playdate**](https://play.date) **toybox** which lets you import and use [**Tiled**](https://www.mapeditor.org) levels. This is based on code found in the `Level1_1` example in the **Playdate** SDK but it extends it to provide new features and optimised level rendering.
 
