@@ -46,6 +46,10 @@ Layers are basically a subset of the `layer` objects found in the **Tiled** file
 * `Layer.tilemap` - A **Playdate** [Tilemap](https://sdk.play.date/1.12.3/Inside%20Playdate.html#C-graphics.tilemap) object which contains all the tiles for this layer.
 * `Layer.empty_ids` - A table of ids for tiles which have the custom property `no_collisions` set to `true`.
 
+## Sample code
+
+You can find an example of using **Tiled Up** in the little [**Poke Crossing**](https://github.com/DidierMalenfant/poke-crossing) project.
+
 ## TODO
 
 * Add some more setup code, especially setting up wall collision.
