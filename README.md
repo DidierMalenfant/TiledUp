@@ -10,6 +10,12 @@ You can add it to your **Playdate** project by installing [**toybox.py**](https:
 toybox add DidierMalenfant/tiled-up
 ```
 
+Then, if your code is in the `source` folder, just import the following:
+
+```lua
+import '../toyboxes/toyboxes.lua'
+```
+
 This **toybox** contains **Lua** toys for you to play with.
 
 ---
