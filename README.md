@@ -8,6 +8,7 @@ You can add it to your **Playdate** project by installing [**toybox.py**](https:
 
 ```console
 toybox add DidierMalenfant/tiled-up
+toybox update
 ```
 
 Then, if your code is in the `source` folder, just import the following:
