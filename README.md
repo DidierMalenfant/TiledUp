@@ -4,6 +4,8 @@
 
 **Tiled Up** is a [**Playdate**](https://play.date) **toybox** which lets you import and use [**Tiled**](https://www.mapeditor.org) levels. This is based on code found in the `Level1_1` example in the **Playdate** SDK but it extends it to provide new features and optimised level rendering.
 
+‼️ This **toybox** is in active development, the API can change at any time... ‼️
+ 
 You can add it to your **Playdate** project by installing [**toybox.py**](https://toyboxpy.io), going to your project folder in a Terminal window and typing:
 
 ```console
@@ -55,7 +57,7 @@ Layers are basically a subset of the `layer` objects found in the **Tiled** file
 
 ## Sample code
 
-You can find an example of using **Tiled Up** in the little [**Poke Crossing**](https://github.com/DidierMalenfant/poke-crossing) project.
+You can find an example of using **Tiled Up** in the little [**Aspen**](https://github.com/DidierMalenfant/Aspen) **toybox**.
 
 ## TODO
 
