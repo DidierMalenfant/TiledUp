@@ -1,4 +1,4 @@
--- Globals provided by tiled-up.
+-- Globals provided by TiledUp.
 stds.github_didiermalenfant_tiledup = {
     globals = {
         tiledup = {

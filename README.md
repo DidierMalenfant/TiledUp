@@ -1,15 +1,15 @@
-# Tiled Up for Playdate
+# TiledUp for Playdate
 
-[![MIT License](https://img.shields.io/github/license/DidierMalenfant/tiled-up)](https://spdx.org/licenses/MIT.html) [![Lua Version](https://img.shields.io/badge/Lua-5.4-yellowgreen)](https://lua.org) [![Toybox Compatible](https://img.shields.io/badge/toybox.py-compatible-brightgreen)](https://toyboxpy.io) [![Latest Version](https://img.shields.io/github/v/tag/DidierMalenfant/tiled-up)](https://github.com/DidierMalenfant/tiled-up/tags)
+[![MIT License](https://img.shields.io/github/license/DidierMalenfant/TiledUp)](https://spdx.org/licenses/MIT.html) [![Lua Version](https://img.shields.io/badge/Lua-5.4-yellowgreen)](https://lua.org) [![Toybox Compatible](https://img.shields.io/badge/toybox.py-compatible-brightgreen)](https://toyboxpy.io) [![Latest Version](https://img.shields.io/github/v/tag/DidierMalenfant/TiledUp)](https://github.com/DidierMalenfant/TiledUp/tags)
 
-**Tiled Up** is a [**Playdate**](https://play.date) **toybox** which lets you import and use [**Tiled**](https://www.mapeditor.org) levels. This is based on code found in the `Level1_1` example in the **Playdate** SDK but it extends it to provide new features and optimised level rendering.
+**TiledUp** is a [**Playdate**](https://play.date) **toybox** which lets you import and use [**Tiled**](https://www.mapeditor.org) levels. This is based on code found in the `Level1_1` example in the **Playdate** SDK but it extends it to provide new features and optimised level rendering.
 
 ‼️ This **toybox** is in active development, the API can change at any time... ‼️
  
 You can add it to your **Playdate** project by installing [**toybox.py**](https://toyboxpy.io), going to your project folder in a Terminal window and typing:
 
 ```console
-toybox add DidierMalenfant/tiled-up
+toybox add DidierMalenfant/TiledUp
 toybox update
 ```
 
@@ -57,7 +57,7 @@ Layers are basically a subset of the `layer` objects found in the **Tiled** file
 
 ## Sample code
 
-You can find an example of using **Tiled Up** in the little [**Aspen**](https://github.com/DidierMalenfant/Aspen) **toybox**.
+You can find an example of using **TiledUp** in the little [**Aspen**](https://github.com/DidierMalenfant/Aspen) **toybox**.
 
 ## TODO
 
@@ -67,4 +67,4 @@ You can find an example of using **Tiled Up** in the little [**Aspen**](https://
 
 ## License
 
-**Tiled Up** is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+**TiledUp** is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
