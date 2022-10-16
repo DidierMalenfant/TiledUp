@@ -1,7 +1,7 @@
 -- SPDX-FileCopyrightText: 2022-present Didier Malenfant <coding@malenfant.net>
 --
 -- SPDX-License-Identifier: MIT
- 
+
 local gfx <const> = playdate.graphics
 local file <const> = playdate.file
 local path <const> = pdbase.filepath
@@ -12,7 +12,7 @@ class('Layer', { }, tiledup).extends()
 
 function tiledup.Layer:init(name)
     tiledup.Layer.super.init(self)
-    
+
     self.name = name
 end
 
@@ -87,8 +87,8 @@ local function getTilesetsFromJSON(json_table, parent_folder)
             return nil
         end
 
-        empty_ids = {}
-        
+        local empty_ids = {}
+
         for _, tile in ipairs(tileset.tiles) do
             local properties = tile.properties
             if properties ~= nil then
@@ -97,9 +97,9 @@ local function getTilesetsFromJSON(json_table, parent_folder)
                 end
             end
         end
-        
+
         new_tileset.empty_ids = empty_ids
-        
+
         tilesets[i] = new_tileset
     end
 
@@ -130,16 +130,16 @@ class('Level', { }, tiledup).extends()
 
 function tiledup.Level:init(tiled_path)
     tiledup.Level.super.init(self)
-    
+
     self.tile_width = 0
     self.tile_height = 0
     self.layers = {}
-    
+
     local json_table = getjson_tableFromTiledFile(tiled_path)
     if json_table == nil then
         return
     end
-    
+
     -- load tile sets
     local parent_folder = path.directory(tiled_path)
     local tilesets = getTilesetsFromJSON(json_table, parent_folder)
@@ -150,9 +150,9 @@ function tiledup.Level:init(tiled_path)
     -- create tile maps from the level data and already-loaded tile sets
     for i = 1, #json_table.layers do
         local tileset = nil
-    
+
         local json_layer = json_table.layers[i]
-    
+
         local properties = json_layer.properties
         if properties ~= nil then
             local tileset_name = tileset_nameForProperies(properties)
@@ -160,7 +160,7 @@ function tiledup.Level:init(tiled_path)
                 tileset = tilesetWithName(tilesets, tileset_name)
 
                 local layer = {}
-    
+
                 -- local layer = tiledup.Layer(json_layer.name)
                 layer.name = json_layer.name
                 layer.x = json_layer.x
@@ -171,39 +171,39 @@ function tiledup.Level:init(tiled_path)
                 layer.pixelWidth = layer.tileWidth * tileset.tileWidth
                 layer.tilemap = gfx.tilemap.new()
                 assert(layer.tilemap)
-    
+
                 layer.tilemap:setImageTable(tileset.imageTable)
                 layer.tilemap:setSize(layer.tileWidth, layer.tileHeight)
-    
+
                 -- we want our indexes for each tile set to be 1-based, so remove the offset that Tiled adds.
                 -- this is only makes sense because because we have exactly one tile map image per layer
                 local index_modifier = tileset.firstgid - 1
-    
+
                 local tileData = json_layer.data
                 local x = 1
                 local y = 1
-    
+
                 for j = 1, #tileData do
                     local tile_index = tileData[j]
-    
+
                     if tile_index > 0 then
                         layer.tilemap:setTileAtPosition(x, y, tile_index - index_modifier)
                     end
-    
+
                     x += 1
-    
+
                     if x > layer.tileWidth - 1 then
                         x = 0
                         y += 1
                     end
                 end
-                                
+
                 layer.empty_ids = tileset.empty_ids
-                
+
                 self.layers[json_layer.name] = layer
             end
         end
-    
+
         if tileset == nil then
             print('Could not find a tileset name property for layer \'' .. json_layer.name .. '\'')
         end

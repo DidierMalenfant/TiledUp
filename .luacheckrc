@@ -1,35 +1,5 @@
--- Globals provided by TiledUp.
-stds.github_didiermalenfant_tiledup = {
-    globals = {
-        tiledup = {
-            fields = {
-                Level = {
-                    fields = {
-                        super = { 
-                            fields = {
-                                className = {},
-                                init = {},
-                        }
-                    },
-                    className = {},
-                    init = {},
-                },
-                Layer = {
-                    fields = {
-                        super = { 
-                            fields = {
-                                className = {},
-                                init = {},
-                        }
-                    },
-                    className = {},
-                    init = {},
-                }
-            }
-        }
-    }
-}
+stds.tiledup = require "luacheck/Luacheck"
 
-std = "lua54+playdate+github_didiermalenfant_tiledup"
+std = "lua54+playdate+tiledup"
 
 operators = {"+=", "-=", "*=", "/="}
