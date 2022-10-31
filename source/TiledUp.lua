@@ -2,11 +2,13 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local gfx <const> = playdate.graphics
-local file <const> = playdate.file
-local path <const> = pdbase.filepath
+dm = dm or {}
+dm.tiledup = dm.tiledup or {}
 
-tiledup = {}
+local tiledup <const> = dm.tiledup
+local file <const> = playdate.file
+local path <const> = dm.filepath
+local gfx <const> = playdate.graphics
 
 class('Layer', { }, tiledup).extends()
 

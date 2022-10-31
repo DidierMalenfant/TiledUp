@@ -10,30 +10,34 @@
 
 return {
     globals = {
-        tiledup = {
+        dm = {
             fields = {
-                Level = {
+                tiledup = {
                     fields = {
-                        super = {
+                        Level = {
                             fields = {
+                                super = {
+                                    fields = {
+                                        className = {},
+                                        init = {},
+                                    }
+                                },
                                 className = {},
                                 init = {},
                             }
                         },
-                        className = {},
-                        init = {},
-                    }
-                },
-                Layer = {
-                    fields = {
-                        super = {
+                        Layer = {
                             fields = {
+                                super = {
+                                    fields = {
+                                        className = {},
+                                        init = {}
+                                    }
+                                },
                                 className = {},
                                 init = {}
                             }
-                        },
-                        className = {},
-                        init = {}
+                        }
                     }
                 }
             }

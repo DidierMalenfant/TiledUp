@@ -33,27 +33,27 @@ The `tiledup` module provides functionality to load **Tiled** levels. Level file
 
 It provides two classes: `Level` and `Layer`.
 
-#### `tiledup.Level`
+#### `dm.tiledup.Level`
 
-A `tiledup.Level` object contains the following properties:
+A `dm.tiledup.Level` object contains the following properties:
 
-* `Level.layers` -  A dictionary of `tiledup.Layers`, sorted by layer name.
-* `Level.tile_width`, `Level.tile_height` - Width and height of a single tile in the level.
+* `layers` -  A dictionary of `dm.tiledup.Layers`, sorted by layer name.
+* `tile_width`, `tile_height` - Width and height of a single tile in the level.
 
-##### `tiledup.Level(path)`
+##### `dm.tiledup.Level(path)`
 
-Imports the **Tiled** json file (with the `.tmj` extension) located at `path`. Returns a `tiledup.Level` object.
+Imports the **Tiled** json file (with the `.tmj` extension) located at `path`. Returns a `dm.tiledup.Level` object.
 
-#### `tiledup.Layer`
+#### `dm.tiledup.Layer`
 
-Layers are basically a subset of the `layer` objects found in the **Tiled** file. A `tiledup.Layer` contains the following properties:
+Layers are basically a subset of the `layer` objects found in the **Tiled** file. A `dm.tiledup.Layer` contains the following properties:
 
-* `Layer.name` - Name of the layer.
-* `Layer.x`, `layer.y` - x and y offsets of the layer.
-* `Layer.tileWidth`, `layer.tileHeight` - Width and height of the tiles in that layer, in pixels.
-* `Layer.pixelWidth`, `layer.pixelHeight` - Total width and height of the layer, in pixels.
-* `Layer.tilemap` - A **Playdate** [Tilemap](https://sdk.play.date/1.12.3/Inside%20Playdate.html#C-graphics.tilemap) object which contains all the tiles for this layer.
-* `Layer.empty_ids` - A table of ids for tiles which have the custom property `no_collisions` set to `true`.
+* `name` - Name of the layer.
+* `x`, `y` - x and y offsets of the layer.
+* `tileWidth`, `tileHeight` - Width and height of the tiles in that layer, in pixels.
+* `pixelWidth`, `pixelHeight` - Total width and height of the layer, in pixels.
+* `tilemap` - A **Playdate** [Tilemap](https://sdk.play.date/1.12.3/Inside%20Playdate.html#C-graphics.tilemap) object which contains all the tiles for this layer.
+* `empty_ids` - A table of ids for tiles which have the custom property `no_collisions` set to `true`.
 
 ## Sample code
 
